@@ -5,12 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:viewModel="clr-namespace:eduClient.MVVM.ViewModel"
         xmlns:local="clr-namespace:eduClient"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" AllowsTransparency="True"
+        WindowStyle="none" ResizeMode="NoResize"
+        Title="Educlient" Height="450" Width="800">
     <Window.DataContext>
         <viewModel:MainWindowVM/>
     </Window.DataContext>
     <Grid>
+        <Button Content="Press me" HorizontalAlignment="Left" Margin="158,153,0,0" VerticalAlignment="Top" Height="42" Width="101"
+                Command="{Binding TestButtonCommand}"/>
+        <TextBlock Text="{Binding TestText}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 
     </Grid>
 </Window>
